@@ -1,0 +1,38 @@
+[gd_scene load_steps=8 format=3 uid="uid://87sgwunspoac"]
+
+[ext_resource type="Texture2D" uid="uid://6nvfhp5m0kfh" path="res://assets/Player.png" id="1_erqiy"]
+[ext_resource type="Script" path="res://player/player.gd" id="1_x6vun"]
+[ext_resource type="Script" path="res://components/hurtbox_component.gd" id="2_jcl7r"]
+[ext_resource type="Script" path="res://components/hitbox_component.gd" id="3_efi7r"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0ea1r"]
+radius = 15.0333
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hxe42"]
+radius = 15.0333
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f1hgt"]
+radius = 16.0312
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_x6vun")
+
+[node name="PhysicsCollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_0ea1r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_erqiy")
+
+[node name="HurtboxComponent" type="Area2D" parent="."]
+script = ExtResource("2_jcl7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtboxComponent"]
+shape = SubResource("CircleShape2D_hxe42")
+debug_color = Color(0.945098, 0.231373, 0, 0.419608)
+
+[node name="HitboxComponent" type="Area2D" parent="."]
+script = ExtResource("3_efi7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_f1hgt")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
