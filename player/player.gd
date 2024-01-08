@@ -3,10 +3,8 @@ extends CharacterBody2D
 @export var acceleration: float = 50.0
 @export var speed: int = 300
 
+#Used to kill the player
 @onready var hurtbox_component = $HurtboxComponent
-
-func _ready():
-	hurtbox_component.hurt.connect(queue_free.unbind(1))
 
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
