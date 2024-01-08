@@ -3,8 +3,12 @@ extends CharacterBody2D
 @export var acceleration: float = 50.0
 @export var speed: int = 300
 
-func _physics_process(delta):
+@onready var hurtbox_component = $HurtboxComponent
 
+func _ready():
+	hurtbox_component.hurt.connect(queue_free.unbind(1))
+
+func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

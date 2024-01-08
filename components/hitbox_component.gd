@@ -11,4 +11,5 @@ func _ready():
 func check_collision(area: Area2D) -> void:
 	if not area is HurtboxComponent:
 		return
-	area.hurt.emit(self)
+	if damaging:
+		area.hurt.emit(self)
