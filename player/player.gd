@@ -6,9 +6,6 @@ extends CharacterBody2D
 #Used to kill the player
 @onready var hurtbox_component = $HurtboxComponent
 
-func _ready():
-	hurtbox_component.hurt.connect(queue_free.unbind(1))
-
 func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
