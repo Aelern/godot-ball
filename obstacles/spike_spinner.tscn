@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://pbrrsbnfdwwk"]
+
+[ext_resource type="Script" path="res://obstacles/spike_spinner.gd" id="1_xhmh6"]
+
+[node name="SpikeSpinner" type="Node2D"]
+script = ExtResource("1_xhmh6")
+rotate_speed = 120.0

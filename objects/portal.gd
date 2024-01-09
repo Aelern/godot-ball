@@ -6,8 +6,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	hitbox_component.hit_hurtbox.connect(change_level.unbind(1))
+	hitbox_component.hit_hurtbox.connect(change_level)
 
 #Run level completion effects then advance to the next level
-func change_level():
-	queue_free()	
+func change_level(hurtbox: HurtboxComponent):
+	hurtbox.get_parent().queue_free()	
