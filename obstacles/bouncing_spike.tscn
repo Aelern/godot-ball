@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://wbppobph7c7b"]
+
+[ext_resource type="PackedScene" uid="uid://cj00kyspwebpe" path="res://obstacles/spike.tscn" id="1_ccptp"]
+[ext_resource type="Script" path="res://obstacles/bouncing_spike.gd" id="2_bnb7r"]
+
+[node name="BouncingSpike" instance=ExtResource("1_ccptp")]
+script = ExtResource("2_bnb7r")
+speed = Vector2(0, 0)

@@ -6,16 +6,18 @@
 [ext_resource type="Script" path="res://components/destroy_component.gd" id="4_b4t6g"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0ea1r"]
-radius = 15.0333
+radius = 16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hxe42"]
 radius = 15.0333
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 0
 script = ExtResource("1_x6vun")
 
 [node name="PhysicsCollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_0ea1r")
+debug_color = Color(1, 1, 1, 0.270588)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_erqiy")

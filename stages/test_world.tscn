@@ -1,12 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://djk35emyflnqt"]
+[gd_scene load_steps=5 format=3 uid="uid://djk35emyflnqt"]
 
 [ext_resource type="PackedScene" uid="uid://87sgwunspoac" path="res://player/player.tscn" id="1_6gi1n"]
 [ext_resource type="PackedScene" uid="uid://cj00kyspwebpe" path="res://obstacles/spike.tscn" id="2_2xgme"]
+[ext_resource type="PackedScene" uid="uid://dpauun2i4vpjj" path="res://objects/portal.tscn" id="3_fmdho"]
+[ext_resource type="PackedScene" uid="uid://wbppobph7c7b" path="res://obstacles/bouncing_spike.tscn" id="4_3lw1i"]
 
 [node name="TestWorld" type="Node2D"]
+
+[node name="Spike" parent="." instance=ExtResource("2_2xgme")]
+position = Vector2(256, 288)
+
+[node name="Portal" parent="." instance=ExtResource("3_fmdho")]
+position = Vector2(960, 704)
 
 [node name="Player" parent="." instance=ExtResource("1_6gi1n")]
 position = Vector2(448, 272)
 
-[node name="Spike" parent="." instance=ExtResource("2_2xgme")]
-position = Vector2(240, 272)
+[node name="BouncingSpike" parent="." instance=ExtResource("4_3lw1i")]
+position = Vector2(544, 352)
+speed = Vector2(300, 0)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 768, 1024, 768, 1024, 0, 1088, 0, 1088, 832, 0, 832)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
+polygon = PackedVector2Array(0, 768, 0, 0, 1024, 0, 1024, -64, -64, -64, -64, 768)
