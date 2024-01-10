@@ -50,7 +50,7 @@ script = ExtResource("1_usjln")
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_k3rrb")
 autoplay = "default"
-frame_progress = 0.197242
+frame_progress = 0.932459
 
 [node name="HitboxComponent" type="Area2D" parent="."]
 collision_layer = 0
