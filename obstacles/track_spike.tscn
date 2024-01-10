@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://x7cyys80l37w"]
+
+[ext_resource type="PackedScene" uid="uid://cj00kyspwebpe" path="res://obstacles/spike.tscn" id="1_7qdti"]
+[ext_resource type="Script" path="res://obstacles/track_spike.gd" id="2_u6k2r"]
+
+[node name="TrackSpike" instance=ExtResource("1_7qdti")]
+script = ExtResource("2_u6k2r")
+speed = Vector2(0, 0)
