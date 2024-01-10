@@ -10,4 +10,4 @@ func _ready():
 
 #Run level completion effects then advance to the next level
 func change_level(hurtbox: HurtboxComponent):
-	hurtbox.get_parent().queue_free()	
+	get_tree().change_scene_to_packed(next_level)
