@@ -12,6 +12,8 @@ point_count = 5
 curve = SubResource("Curve2D_at6ag")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(784, 208)
+rotation = 1.5708
 
 [node name="TrackSpike" parent="PathFollow2D" instance=ExtResource("1_4d3pq")]
 speed = 5.0

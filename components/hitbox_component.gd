@@ -4,7 +4,7 @@ extends Area2D
 #Hitbox component does nothing without a child CollisionShape2D/CollisionPolygon2D
 #Hitbox collision property must be given the correct mask to function
 
-@export var damaging: bool = true	#If true this hitbox will attempt to destroy colliding hurtboxes
+@export var damaging: bool = false	#If true this hitbox will attempt to destroy colliding hurtboxes
 
 signal hit_hurtbox(hurtbox)		#Signal used to detect when hurtbox has been detected and we want to do something to it that is not damage
 

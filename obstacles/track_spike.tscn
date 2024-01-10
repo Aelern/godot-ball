@@ -5,4 +5,7 @@
 
 [node name="TrackSpike" instance=ExtResource("1_7qdti")]
 script = ExtResource("2_u6k2r")
-speed = Vector2(0, 0)
+speed = 5.0
+
+[node name="HitboxComponent" parent="." index="1"]
+damaging = true

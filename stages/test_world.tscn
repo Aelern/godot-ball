@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://djk35emyflnqt"]
+[gd_scene load_steps=12 format=3 uid="uid://djk35emyflnqt"]
 
 [ext_resource type="PackedScene" uid="uid://87sgwunspoac" path="res://player/player.tscn" id="1_6gi1n"]
 [ext_resource type="Script" path="res://stages/level.gd" id="1_e0lnr"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://wbppobph7c7b" path="res://obstacles/bouncing_spike.tscn" id="4_3lw1i"]
 [ext_resource type="PackedScene" uid="uid://23gs4vbtlnpj" path="res://objects/wall_tile_map.tscn" id="5_5aqha"]
 [ext_resource type="PackedScene" uid="uid://pbrrsbnfdwwk" path="res://obstacles/spike_spinner.tscn" id="6_vny70"]
+[ext_resource type="PackedScene" uid="uid://b8dm72v47ln2u" path="res://objects/red_key.tscn" id="9_283or"]
 [ext_resource type="PackedScene" uid="uid://d3b7gb0fjofma" path="res://obstacles/track.tscn" id="9_e7mly"]
+[ext_resource type="PackedScene" uid="uid://xoh8oaj6jwl1" path="res://objects/red_key_gate.tscn" id="10_7o24o"]
 
 [node name="TestWorld" type="Node2D"]
 script = ExtResource("1_e0lnr")
@@ -45,10 +47,13 @@ position = Vector2(464, 304)
 [node name="WallTileMap" parent="." instance=ExtResource("5_5aqha")]
 layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 0, 131072, 1, 0, 196608, 1, 0, 262144, 1, 0, 327680, 1, 0, 393216, 1, 0, 458752, 1, 0, 524288, 1, 0, 589824, 1, 0, 655360, 1, 0, 720896, 1, 0, 786432, 1, 0, 851968, 1, 0, 917504, 1, 0, 983040, 1, 0, 1048576, 1, 0, 1114112, 1, 0, 1179648, 1, 0, 1245184, 1, 0, 1310720, 1, 0, 1376256, 1, 0, 1441792, 1, 0, 1507328, 1, 0, 1507329, 1, 0, 1507330, 1, 0, 1507331, 1, 0, 1507332, 1, 0, 1507333, 1, 0, 1507334, 1, 0, 1507335, 1, 0, 1507336, 1, 0, 1507337, 1, 0, 1507338, 1, 0, 1507339, 1, 0, 1507340, 1, 0, 1507341, 1, 0, 1507342, 1, 0, 1507343, 1, 0, 1507344, 1, 0, 1507345, 1, 0, 1507346, 1, 0, 1507347, 1, 0, 1507348, 1, 0, 1507349, 1, 0, 1507350, 1, 0, 1507351, 1, 0, 1507352, 1, 0, 1507353, 1, 0, 1507354, 1, 0, 1507355, 1, 0, 1507356, 1, 0, 1507357, 1, 0, 1507358, 1, 0, 1507359, 1, 0, 1441823, 1, 0, 1376287, 1, 0, 1310751, 1, 0, 1245215, 1, 0, 1179679, 1, 0, 1114143, 1, 0, 1048607, 1, 0, 983071, 1, 0, 917535, 1, 0, 851999, 1, 0, 786463, 1, 0, 720927, 1, 0, 655391, 1, 0, 589855, 1, 0, 524319, 1, 0, 458783, 1, 0, 393247, 1, 0, 327711, 1, 0, 262175, 1, 0, 196639, 1, 0, 131103, 1, 0, 65567, 1, 0, 31, 1, 0, 30, 1, 0, 29, 1, 0, 28, 1, 0, 27, 1, 0, 26, 1, 0, 25, 1, 0, 24, 1, 0, 23, 1, 0, 22, 1, 0, 21, 1, 0, 20, 1, 0, 19, 1, 0, 18, 1, 0, 17, 1, 0, 16, 1, 0, 15, 1, 0, 14, 1, 0, 13, 1, 0, 12, 1, 0, 11, 1, 0, 10, 1, 0, 9, 1, 0, 8, 1, 0, 7, 1, 0, 6, 1, 0, 5, 1, 0, 4, 1, 0, 3, 1, 0, 2, 1, 0, 1, 1, 0)
 
-[node name="Path2D" parent="." instance=ExtResource("9_e7mly")]
+[node name="RedKey" parent="." node_paths=PackedStringArray("gate") instance=ExtResource("9_283or")]
+position = Vector2(224, 608)
+gate = NodePath("../RedKeyGate")
 
-[node name="PathFollow2D" parent="Path2D" index="0"]
-position = Vector2(784, 208)
-rotation = 1.5708
+[node name="RedKeyGate" parent="." instance=ExtResource("10_7o24o")]
+position = Vector2(848, 384)
+
+[node name="Path2D" parent="." instance=ExtResource("9_e7mly")]
 
 [editable path="Path2D"]

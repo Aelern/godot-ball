@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://xoh8oaj6jwl1"]
+
+[ext_resource type="Texture2D" uid="uid://fnnj8bjyctv7" path="res://assets/GateBodyRed.png" id="1_oxcbh"]
+[ext_resource type="Script" path="res://objects/key_gate.gd" id="1_vvqta"]
+[ext_resource type="Texture2D" uid="uid://tkjewfiswcni" path="res://assets/GateKeyholeRed.png" id="2_olpnl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vmgg4"]
+size = Vector2(18, 64)
+
+[node name="RedKeyGate" type="Node2D"]
+script = ExtResource("1_vvqta")
+
+[node name="RedGate" type="StaticBody2D" parent="."]
+collision_mask = 0
+
+[node name="GateSprite" type="Sprite2D" parent="RedGate"]
+texture = ExtResource("1_oxcbh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RedGate"]
+shape = SubResource("RectangleShape2D_vmgg4")
+debug_color = Color(1, 1, 1, 0.0666667)
+
+[node name="KeyholeSprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_olpnl")

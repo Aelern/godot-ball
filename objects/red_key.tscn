@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://b8dm72v47ln2u"]
+
+[ext_resource type="Script" path="res://objects/key.gd" id="1_8bwr2"]
+[ext_resource type="Texture2D" uid="uid://bwuo7ku6xdggo" path="res://assets/KeyRed.png" id="1_cbnrx"]
+[ext_resource type="Script" path="res://components/hitbox_component.gd" id="2_fhkb0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_167wg"]
+radius = 18.0
+
+[node name="RedKey" type="Node2D"]
+script = ExtResource("1_8bwr2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_cbnrx")
+
+[node name="HitboxComponent" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_fhkb0")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_167wg")
