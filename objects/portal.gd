@@ -9,5 +9,6 @@ func _ready():
 	hitbox_component.hit_hurtbox.connect(change_level)
 
 #Run level completion effects then advance to the next level
-func change_level(hurtbox: HurtboxComponent):
-	get_tree().change_scene_to_packed(next_level)
+func change_level(_hurtbox: HurtboxComponent):
+	get_tree().call_deferred("change_scene_to_packed", next_level)
+	#get_tree().change_scene_to_packed(next_level)
