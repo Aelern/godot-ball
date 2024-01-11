@@ -1,8 +1,58 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8dm72v47ln2u"]
+[gd_scene load_steps=12 format=3 uid="uid://b8dm72v47ln2u"]
 
 [ext_resource type="Script" path="res://objects/key.gd" id="1_8bwr2"]
-[ext_resource type="Texture2D" uid="uid://bwuo7ku6xdggo" path="res://assets/KeyRed.png" id="1_cbnrx"]
+[ext_resource type="Texture2D" uid="uid://dx57o3c0x2q3p" path="res://assets/KeyRed.png" id="1_cbnrx"]
 [ext_resource type="Script" path="res://components/hitbox_component.gd" id="2_fhkb0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fv1q"]
+atlas = ExtResource("1_cbnrx")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u475o"]
+atlas = ExtResource("1_cbnrx")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlt6m"]
+atlas = ExtResource("1_cbnrx")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uhups"]
+atlas = ExtResource("1_cbnrx")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3gjyo"]
+atlas = ExtResource("1_cbnrx")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5l61"]
+atlas = ExtResource("1_cbnrx")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ka3i5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fv1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u475o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlt6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uhups")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3gjyo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5l61")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_167wg"]
 radius = 18.0
@@ -10,8 +60,10 @@ radius = 18.0
 [node name="RedKey" type="Node2D"]
 script = ExtResource("1_8bwr2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_cbnrx")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ka3i5")
+autoplay = "default"
+frame_progress = 0.526186
 
 [node name="HitboxComponent" type="Area2D" parent="."]
 collision_layer = 0

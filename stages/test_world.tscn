@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://djk35emyflnqt"]
+[gd_scene load_steps=14 format=3 uid="uid://djk35emyflnqt"]
 
 [ext_resource type="PackedScene" uid="uid://87sgwunspoac" path="res://player/player.tscn" id="1_6gi1n"]
 [ext_resource type="Script" path="res://stages/level.gd" id="1_e0lnr"]
@@ -7,10 +7,17 @@
 [ext_resource type="PackedScene" uid="uid://dpauun2i4vpjj" path="res://objects/portal.tscn" id="3_fmdho"]
 [ext_resource type="PackedScene" uid="uid://wbppobph7c7b" path="res://obstacles/bouncing_spike.tscn" id="4_3lw1i"]
 [ext_resource type="PackedScene" uid="uid://23gs4vbtlnpj" path="res://objects/wall_tile_map.tscn" id="5_5aqha"]
+[ext_resource type="PackedScene" uid="uid://dw6lfp21xibpy" path="res://obstacles/spike_spawner.tscn" id="6_twd0s"]
 [ext_resource type="PackedScene" uid="uid://pbrrsbnfdwwk" path="res://obstacles/spike_spinner.tscn" id="6_vny70"]
 [ext_resource type="PackedScene" uid="uid://b8dm72v47ln2u" path="res://objects/red_key.tscn" id="9_283or"]
-[ext_resource type="PackedScene" uid="uid://d3b7gb0fjofma" path="res://obstacles/track.tscn" id="9_e7mly"]
 [ext_resource type="PackedScene" uid="uid://xoh8oaj6jwl1" path="res://objects/red_key_gate.tscn" id="10_7o24o"]
+[ext_resource type="PackedScene" uid="uid://x7cyys80l37w" path="res://obstacles/track_spike.tscn" id="11_hpkvx"]
+
+[sub_resource type="Curve2D" id="Curve2D_al1pg"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 176, 560, 0, 0, 0, 0, 176, 656, 0, 0, 0, 0, 272, 656, 0, 0, 0, 0, 272, 560, 0, 0, 0, 0, 176, 560)
+}
+point_count = 5
 
 [node name="TestWorld" type="Node2D"]
 script = ExtResource("1_e0lnr")
@@ -23,11 +30,15 @@ position = Vector2(240, 272)
 
 [node name="Portal" parent="." instance=ExtResource("3_fmdho")]
 position = Vector2(944, 688)
-next_level = null
 
 [node name="BouncingSpike" parent="." instance=ExtResource("4_3lw1i")]
 position = Vector2(560, 368)
 speed = Vector2(300, 0)
+
+[node name="SpikeSpawner" parent="." instance=ExtResource("6_twd0s")]
+position = Vector2(816, 48)
+speed = Vector2(0, 200)
+rate = 0.5
 
 [node name="SpikeSpinner" parent="." instance=ExtResource("6_vny70")]
 position = Vector2(304, 496)
@@ -54,6 +65,11 @@ gate = NodePath("../RedKeyGate")
 [node name="RedKeyGate" parent="." instance=ExtResource("10_7o24o")]
 position = Vector2(848, 384)
 
-[node name="Path2D" parent="." instance=ExtResource("9_e7mly")]
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_al1pg")
 
-[editable path="Path2D"]
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(176, 560)
+rotation = 1.5708
+
+[node name="TrackSpike" parent="Path2D/PathFollow2D" instance=ExtResource("11_hpkvx")]

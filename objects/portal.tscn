@@ -56,7 +56,6 @@ frame_progress = 0.932459
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("2_mehth")
-damaging = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
 shape = SubResource("CircleShape2D_v41k1")
