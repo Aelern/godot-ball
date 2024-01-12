@@ -7,5 +7,6 @@ extends Spike
 func _ready():
 	assert(get_parent() is PathFollow2D, "Error: TrackSpike not a child of a PathFollow2D")
 
+#Move by updating the progress stat of parent PathFollow2D
 func _physics_process(delta):
 	get_parent().progress += speed

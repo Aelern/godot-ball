@@ -1,8 +1,8 @@
 [gd_scene load_steps=23 format=3 uid="uid://dyacpk5ql2oiw"]
 
-[ext_resource type="Script" path="res://stages/title_screen_1.gd" id="1_q8oid"]
+[ext_resource type="Script" path="res://menus/title_screen_1.gd" id="1_q8oid"]
 [ext_resource type="Texture2D" uid="uid://dmkcuf4rj2140" path="res://assets/Start_text.png" id="2_3e4qj"]
-[ext_resource type="PackedScene" path="res://objects/ground_tile_map.tscn" id="2_hklm8"]
+[ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="2_hklm8"]
 [ext_resource type="Texture2D" uid="uid://cjubywjey10ni" path="res://assets/level_select_text.png" id="3_home6"]
 [ext_resource type="Texture2D" uid="uid://yr24jsdiq7rf" path="res://assets/rainswept_logo.png" id="4_a2lxf"]
 [ext_resource type="Texture2D" uid="uid://cl2ly87sptmyq" path="res://assets/Credits_text.png" id="4_p85cx"]
