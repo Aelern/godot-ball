@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://chqfj6mjso68m"]
+
+[ext_resource type="Script" path="res://menus/main_menu.gd" id="1_ervmu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_br3ed"]
+font_size = 96
+
+[sub_resource type="LabelSettings" id="LabelSettings_ysxmm"]
+font_size = 64
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_ervmu")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 1024.0
+offset_bottom = 768.0
+alignment = 1
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Spikefield"
+label_settings = SubResource("LabelSettings_br3ed")
+horizontal_alignment = 1
+
+[node name="StartGameLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+text = "Press Space to play"
+label_settings = SubResource("LabelSettings_ysxmm")
+horizontal_alignment = 1
+vertical_alignment = 1

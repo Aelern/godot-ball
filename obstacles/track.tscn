@@ -1,10 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3b7gb0fjofma"]
+[gd_scene load_steps=3 format=3 uid="uid://pjwfrxo6rcwl"]
 
 [ext_resource type="PackedScene" uid="uid://x7cyys80l37w" path="res://obstacles/track_spike.tscn" id="1_4d3pq"]
 
 [sub_resource type="Curve2D" id="Curve2D_at6ag"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 784, 208, 0, 0, 0, 0, 784, 560, 0, 0, 0, 0, 912, 560, 0, 0, 0, 0, 912, 208, 0, 0, 0, 0, 784, 208)
+"points": PackedVector2Array(0, 0, 0, 0, 560, 208, 0, 0, 0, 0, 784, 560, 0, 0, 0, 0, 912, 560, 0, 0, 0, 0, 912, 208, 0, 0, 0, 0, 784, 208)
 }
 point_count = 5
 
@@ -12,8 +12,7 @@ point_count = 5
 curve = SubResource("Curve2D_at6ag")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2(784, 208)
-rotation = 1.5708
+position = Vector2(560, 208)
+rotation = 1.00407
 
 [node name="TrackSpike" parent="PathFollow2D" instance=ExtResource("1_4d3pq")]
-speed = 5.0

@@ -10,4 +10,5 @@ func _ready():
 
 #Run level completion effects then advance to the next level
 func change_level(hurtbox: HurtboxComponent):
-	get_tree().change_scene_to_packed(next_level)
+	hurtbox.get_parent().tree_exiting.disconnect(hurtbox.get_parent().tree_exiting.get_connections()[0]["callable"])	#Stops an error being thrown when the game thinks the player is dying because the scene is unloading
+	get_tree().call_deferred("change_scene_to_packed", next_level)

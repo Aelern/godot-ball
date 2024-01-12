@@ -1,6 +1,6 @@
 extends Node2D
 
-@export var rotate_speed: float = 90
+@export var rotate_speed: float = 90	#Speed of rotation in degrees per second
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
