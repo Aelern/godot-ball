@@ -5,6 +5,6 @@ extends Spike
 
 func _physics_process(delta):
 	var collision = move_and_collide(speed * delta)
-	if collision:
+	if collision:	#Use collision data to ricochet in the proper direction
 		speed = speed.bounce(collision.get_normal())
 		velocity = velocity.bounce(collision.get_normal())

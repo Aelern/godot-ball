@@ -14,4 +14,4 @@ func _ready():
 
 func spawn_spike():
 	var spawned_spike = spawner_component.spawn()
-	spawned_spike.set_speed(speed)
+	spawned_spike.speed = speed
