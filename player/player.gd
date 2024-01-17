@@ -12,6 +12,15 @@ enum States {MOVE, BOOST}
 var state = States.MOVE		#The current movement state
 var boostDir: Vector2		#The direction the boost will go in, the players current direction when boost was pressed
 
+func _ready():
+	hurtbox_component.hurt.connect(incrementDeathCounters)
+
+func incrementDeathCounters(_area):
+	PlayerStats.death_count += 1
+	PlayerStats.total_death_count += 1
+	print(PlayerStats.death_count)
+	
+
 #Finite State Machine handles movement for regular movement and the rocket boost
 func _physics_process(delta):
 	if state == States.MOVE:

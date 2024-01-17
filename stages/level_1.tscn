@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6ahjckum522s"]
+[gd_scene load_steps=6 format=3 uid="uid://b6ahjckum522s"]
 
 [ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="1_cp0tf"]
 [ext_resource type="Script" path="res://stages/level.gd" id="1_crtbq"]
 [ext_resource type="PackedScene" uid="uid://dpauun2i4vpjj" path="res://objects/portal.tscn" id="2_hneeg"]
-[ext_resource type="PackedScene" uid="uid://dhu26ovqo2vsw" path="res://stages/level_2.tscn" id="3_cbwnt"]
 [ext_resource type="PackedScene" uid="uid://87sgwunspoac" path="res://player/player.tscn" id="3_f02ke"]
 [ext_resource type="PackedScene" uid="uid://23gs4vbtlnpj" path="res://objects/wall_tile_map.tscn" id="4_qmsf2"]
 
@@ -15,7 +14,6 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 
 [node name="Portal" parent="." instance=ExtResource("2_hneeg")]
 position = Vector2(688, 592)
-next_level = ExtResource("3_cbwnt")
 
 [node name="Player" parent="." instance=ExtResource("3_f02ke")]
 position = Vector2(208, 208)
