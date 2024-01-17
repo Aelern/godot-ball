@@ -30,8 +30,14 @@ position = Vector2(496, 336)
 [node name="Spike4" parent="." instance=ExtResource("3_1gya4")]
 position = Vector2(496, 304)
 
+[node name="Spike7" parent="." instance=ExtResource("3_1gya4")]
+position = Vector2(496, 272)
+
 [node name="Spike5" parent="." instance=ExtResource("3_1gya4")]
 position = Vector2(496, 432)
+
+[node name="Spike6" parent="." instance=ExtResource("3_1gya4")]
+position = Vector2(496, 464)
 
 [node name="Player" parent="." instance=ExtResource("3_orlaj")]
 position = Vector2(848, 368)

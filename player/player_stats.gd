@@ -5,7 +5,7 @@ var death_count: int	#Holds the total times the player has died this play sessio
 var level_times = []	#For each level, holds the players achieved time and their best time
 
 func _ready():
-	for i in range(20):
+	for i in range(len(LevelMap.levels)):
 		level_times.append([0.0, 15.0])	#Sets default record time for every level to 15 seconds
 		
 func load_stats():
