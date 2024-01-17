@@ -18,7 +18,6 @@ func _ready():
 func incrementDeathCounters(_area):
 	PlayerStats.death_count += 1
 	PlayerStats.total_death_count += 1
-	print(PlayerStats.death_count)
 	
 
 #Finite State Machine handles movement for regular movement and the rocket boost
