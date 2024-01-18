@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://nvgu12ygbpuw"]
+[gd_scene load_steps=5 format=3 uid="uid://dfqrdx2n1qnts"]
 
-[ext_resource type="FontFile" path="res://assets/SuperMarioBros-ov7d.ttf" id="1_oeoo8"]
+[ext_resource type="FontFile" uid="uid://m8v7bsnlixa2" path="res://assets/SuperMarioBros-ov7d.ttf" id="1_oeoo8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_cs4ra"]
 font = ExtResource("1_oeoo8")
