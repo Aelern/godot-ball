@@ -3,11 +3,11 @@
 [ext_resource type="Script" path="res://stages/level.gd" id="1_2jb8k"]
 [ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="2_xyb8n"]
 [ext_resource type="PackedScene" uid="uid://dpauun2i4vpjj" path="res://objects/portal.tscn" id="3_q4nhn"]
-[ext_resource type="PackedScene" uid="uid://davgiblt62igy" path="res://stages/level_4.tscn" id="4_8mfvq"]
+[ext_resource type="PackedScene" uid="uid://b10hln3ydimj7" path="res://stages/level_4.tscn" id="4_8mfvq"]
 [ext_resource type="PackedScene" uid="uid://cj00kyspwebpe" path="res://obstacles/spike.tscn" id="4_nq105"]
 [ext_resource type="PackedScene" uid="uid://87sgwunspoac" path="res://player/player.tscn" id="4_nvmqn"]
 [ext_resource type="PackedScene" uid="uid://23gs4vbtlnpj" path="res://objects/wall_tile_map.tscn" id="5_r5jm0"]
-[ext_resource type="FontFile" uid="uid://m8v7bsnlixa2" path="res://assets/SuperMarioBros-ov7d.ttf" id="8_a4aiw"]
+[ext_resource type="FontFile" path="res://assets/SuperMarioBros-ov7d.ttf" id="8_a4aiw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dwk07"]
 font = ExtResource("8_a4aiw")

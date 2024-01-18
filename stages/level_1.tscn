@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dhu26ovqo2vsw" path="res://stages/level_2.tscn" id="3_cbwnt"]
 [ext_resource type="PackedScene" uid="uid://87sgwunspoac" path="res://player/player.tscn" id="3_f02ke"]
 [ext_resource type="PackedScene" uid="uid://23gs4vbtlnpj" path="res://objects/wall_tile_map.tscn" id="4_qmsf2"]
-[ext_resource type="FontFile" uid="uid://m8v7bsnlixa2" path="res://assets/SuperMarioBros-ov7d.ttf" id="7_y7koh"]
+[ext_resource type="FontFile" path="res://assets/SuperMarioBros-ov7d.ttf" id="7_y7koh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hpbw4"]
 font = ExtResource("7_y7koh")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://davgiblt62igy"]
+[gd_scene load_steps=11 format=3 uid="uid://b10hln3ydimj7"]
 
 [ext_resource type="Script" path="res://stages/level.gd" id="1_dsd2o"]
 [ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="2_pp53b"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://87sgwunspoac" path="res://player/player.tscn" id="4_tq8k4"]
 [ext_resource type="PackedScene" uid="uid://23gs4vbtlnpj" path="res://objects/wall_tile_map.tscn" id="5_80g82"]
 [ext_resource type="PackedScene" uid="uid://wbppobph7c7b" path="res://obstacles/bouncing_spike.tscn" id="6_q7tn0"]
-[ext_resource type="FontFile" uid="uid://m8v7bsnlixa2" path="res://assets/SuperMarioBros-ov7d.ttf" id="7_1f05l"]
+[ext_resource type="FontFile" path="res://assets/SuperMarioBros-ov7d.ttf" id="7_1f05l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hsq46"]
 font = ExtResource("7_1f05l")
