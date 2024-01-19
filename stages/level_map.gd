@@ -8,3 +8,9 @@ var levels = {
 }
 
 var current_level = 0
+var level_time = 0.0 :
+	set(value):
+		level_time = value
+		timeUpdate.emit(level_time)
+
+signal timeUpdate(new_time)
