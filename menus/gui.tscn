@@ -38,7 +38,7 @@ theme_override_constants/separation = 58
 [node name="Level_label" type="Label" parent="UI_Frame"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Level: 1"
+text = "Level: 00"
 label_settings = SubResource("LabelSettings_cs4ra")
 
 [node name="Timer_label" type="Label" parent="UI_Frame"]
@@ -50,5 +50,5 @@ label_settings = SubResource("LabelSettings_6i4y3")
 [node name="Deaths_label" type="Label" parent="UI_Frame"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Deaths: 0"
+text = "Deaths: 00"
 label_settings = SubResource("LabelSettings_xkhnw")

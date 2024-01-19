@@ -3,8 +3,13 @@ extends Node
 const SAVE_PATH = "res://save.cfg"	#"user://save.cfg"
 
 var total_death_count: int	#Holds the total times the player has ever died
-var death_count: int	#Holds the total times the player has died this play session
+var death_count: int :	#Holds the total times the player has died this play session
+		set(value):
+			death_count = value
+			died.emit(death_count)
 var level_times = []	#For each level, holds the players achieved time and their best time
+
+signal died(new_death_count)
 
 func _ready():
 	death_count = 0
