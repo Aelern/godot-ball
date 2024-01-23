@@ -9,9 +9,10 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.wait_time = rate
-	timer.timeout.connect(spawn_spike)
 	spawn_spike()
+	timer.timeout.connect(spawn_spike)
+	timer.wait_time = rate
+	timer.start()
 
 func spawn_spike():
 	var spawned_spike = spawner_component.spawn()

@@ -8,7 +8,6 @@
 script = ExtResource("1_hoqpy")
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [node name="SpawnerComponent" type="Node2D" parent="."]
 script = ExtResource("2_pr1hw")
