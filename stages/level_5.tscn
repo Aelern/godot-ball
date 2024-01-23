@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cj00kyspwebpe" path="res://obstacles/spike.tscn" id="5_p5hw0"]
 [ext_resource type="PackedScene" uid="uid://dfqrdx2n1qnts" path="res://menus/gui.tscn" id="6_5x7cl"]
 
-[node name="LevelFive" type="Node2D"]
+[node name="Level5" type="Node2D"]
 script = ExtResource("1_e3uny")
 
 [node name="GroundTileMap" parent="." instance=ExtResource("1_25vd0")]

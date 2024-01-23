@@ -5,3 +5,4 @@
 
 [node name="FragileSpike" instance=ExtResource("1_m4kfp")]
 script = ExtResource("2_omxet")
+speed = Vector2(0, 0)

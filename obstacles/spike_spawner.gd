@@ -11,6 +11,7 @@ extends Node2D
 func _ready():
 	timer.wait_time = rate
 	timer.timeout.connect(spawn_spike)
+	spawn_spike()
 
 func spawn_spike():
 	var spawned_spike = spawner_component.spawn()

@@ -13,7 +13,7 @@ signal died(new_death_count)
 
 func _ready():
 	death_count = 0
-	load_stats()
+	#load_stats()
 	if level_times == []:
 		initialize_saved_values()
 		
