@@ -72,16 +72,16 @@ position = Vector2(944, 240)
 position = Vector2(944, 528)
 
 [node name="Spike6" parent="Spikes" instance=ExtResource("5_p5hw0")]
-position = Vector2(752, 560)
+position = Vector2(688, 560)
 
 [node name="Spike7" parent="Spikes" instance=ExtResource("5_p5hw0")]
-position = Vector2(752, 656)
+position = Vector2(688, 656)
 
 [node name="Spike8" parent="Spikes" instance=ExtResource("5_p5hw0")]
-position = Vector2(304, 592)
+position = Vector2(336, 592)
 
 [node name="Spike9" parent="Spikes" instance=ExtResource("5_p5hw0")]
-position = Vector2(304, 624)
+position = Vector2(336, 624)
 
 [node name="Player" parent="." instance=ExtResource("3_o7icj")]
 position = Vector2(112, 144)

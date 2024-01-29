@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var speed: int = 350	#Max speed in any direction
 @export var boostSpeed: int = 750	#Max speed when boosting
 
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var hurtbox_component = $HurtboxComponent		#Used to kill the player
 
 enum States {MOVE, BOOST}
@@ -47,6 +48,7 @@ func move_state():
 	if Input.is_action_just_released("boost") and velocity != Vector2.ZERO:
 		state = States.BOOST
 		boostDir = velocity.normalized()
+		audio_stream_player_2d.play()
 	move_and_slide()
 		
 func boost_state(delta):

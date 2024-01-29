@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://87sgwunspoac"]
+[gd_scene load_steps=8 format=3 uid="uid://87sgwunspoac"]
 
 [ext_resource type="Texture2D" uid="uid://6nvfhp5m0kfh" path="res://assets/Player.png" id="1_erqiy"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_x6vun"]
 [ext_resource type="Script" path="res://components/hurtbox_component.gd" id="2_jcl7r"]
 [ext_resource type="Script" path="res://components/destroy_component.gd" id="4_b4t6g"]
+[ext_resource type="AudioStream" uid="uid://6pchw43erjk4" path="res://assets/dashSound.wav" id="5_uu04m"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0ea1r"]
 radius = 16.0
@@ -35,3 +36,6 @@ debug_color = Color(0.945098, 0.231373, 0, 0.419608)
 script = ExtResource("4_b4t6g")
 actor = NodePath("..")
 hurtbox = NodePath("../HurtboxComponent")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_uu04m")
