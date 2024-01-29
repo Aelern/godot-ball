@@ -1,13 +1,16 @@
 extends Node
 
-var num_players = 8
+var num_players = 4
 var bus = "master"
 
-var available = []
-var queue = []
+var available = []	#Available players
+var queue = []		#Queue of sounds to play
+
+var volume = 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#Creates pool of AudioStreamPlayer nodes
 	for i in num_players:
 		var p = AudioStreamPlayer2D.new()
 		add_child(p)
