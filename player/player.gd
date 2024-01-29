@@ -6,8 +6,9 @@ extends CharacterBody2D
 @export var speed: int = 350	#Max speed in any direction
 @export var boostSpeed: int = 750	#Max speed when boosting
 
-@onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var hurtbox_component = $HurtboxComponent		#Used to kill the player
+@onready var death_audio = "res://sounds/death.wav"
+@onready var dash_audio = "res://sounds/dash.wav"
 
 enum States {MOVE, BOOST}
 var state = States.MOVE		#The current movement state
@@ -19,6 +20,7 @@ func _ready():
 func incrementDeathCounters(_area):
 	PlayerStats.death_count += 1
 	PlayerStats.total_death_count += 1
+	AudioStreamManager.play(death_audio)
 	
 
 #Finite State Machine handles movement for regular movement and the rocket boost
@@ -48,7 +50,7 @@ func move_state():
 	if Input.is_action_just_released("boost") and velocity != Vector2.ZERO:
 		state = States.BOOST
 		boostDir = velocity.normalized()
-		audio_stream_player_2d.play()
+		AudioStreamManager.play(dash_audio)
 	move_and_slide()
 		
 func boost_state(delta):

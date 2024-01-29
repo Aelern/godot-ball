@@ -19,6 +19,7 @@ config/icon="res://assets/Spike.png"
 
 PlayerStats="*res://player/player_stats.gd"
 LevelMap="*res://stages/level_map.gd"
+AudioStreamManager="*res://sounds/audio_stream_manager.gd"
 
 [display]
 

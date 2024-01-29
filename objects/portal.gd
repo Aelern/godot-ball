@@ -1,6 +1,7 @@
 extends Node2D
 
 @onready var hitbox_component = $HitboxComponent	#The hitbox that is looking for the player's collision
+@onready var portal_audio = "res://sounds/portal.wav"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -19,6 +20,7 @@ func change_level(hurtbox: HurtboxComponent):
 		PlayerStats.level_times[LevelMap.current_level-1][1] = snappedf(LevelMap.level_time, 0.01)
 
 	if(LevelMap.current_level < len(LevelMap.levels)):
+		AudioStreamManager.play(portal_audio)
 		get_tree().call_deferred("change_scene_to_file", LevelMap.levels[LevelMap.current_level + 1])
 		LevelMap.current_level += 1
 	else:
