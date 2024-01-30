@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0tek1tplckhk"]
+
+[ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="1_e5d8q"]
+[ext_resource type="Script" path="res://LevelSelectButton.gd" id="1_gq7v0"]
+
+[sub_resource type="Theme" id="Theme_atjcb"]
+
+[node name="LevelSelectButton" type="Button"]
+offset_right = 560.0
+offset_bottom = 384.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = SubResource("Theme_atjcb")
+theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_e5d8q")
+theme_override_font_sizes/font_size = 48
+text = "Level"
+script = ExtResource("1_gq7v0")
