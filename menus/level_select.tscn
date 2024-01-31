@@ -1,16 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://6kxrr8nq5li1"]
+[gd_scene load_steps=6 format=3 uid="uid://6kxrr8nq5li1"]
 
 [ext_resource type="Script" path="res://menus/level_select.gd" id="1_4l7ie"]
 [ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="1_oxska"]
-[ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="2_4r5tn"]
 [ext_resource type="PackedScene" uid="uid://d0tek1tplckhk" path="res://menus/level_select_button.tscn" id="3_ing7p"]
-[ext_resource type="Theme" uid="uid://qy8rymq7rudl" path="res://menus/level_select_button.tres" id="4_qfneu"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_0ve7r"]
-font = ExtResource("2_4r5tn")
-font_size = 72
-outline_size = 16
-outline_color = Color(0, 0, 0, 1)
+[ext_resource type="LabelSettings" uid="uid://bpqvf08y5foi0" path="res://menus/ScreenTitle.tres" id="3_ym7yl"]
+[ext_resource type="PackedScene" uid="uid://ci17dt3c8qs6c" path="res://menus/back_button.tscn" id="5_g178e"]
 
 [node name="LevelSelect" type="Node2D"]
 script = ExtResource("1_4l7ie")
@@ -29,7 +23,7 @@ layout_mode = 0
 offset_right = 1024.0
 offset_bottom = 96.0
 text = "Level Select"
-label_settings = SubResource("LabelSettings_0ve7r")
+label_settings = ExtResource("3_ym7yl")
 horizontal_alignment = 1
 
 [node name="GridContainer" type="GridContainer" parent="Control"]
@@ -122,13 +116,9 @@ level_number = 19
 layout_mode = 2
 level_number = 20
 
-[node name="BackButton" type="Button" parent="Control"]
+[node name="BackButton" parent="Control" instance=ExtResource("5_g178e")]
 layout_mode = 0
-offset_left = 80.0
-offset_top = 16.0
-offset_right = 208.0
-offset_bottom = 80.0
-theme = ExtResource("4_qfneu")
-theme_override_fonts/font = ExtResource("2_4r5tn")
-theme_override_font_sizes/font_size = 36
-text = "Back"
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 128.0
+offset_bottom = 64.0

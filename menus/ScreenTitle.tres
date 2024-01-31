@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bpqvf08y5foi0"]
+
+[ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="1_4vjnw"]
+
+[resource]
+font = ExtResource("1_4vjnw")
+font_size = 72
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)

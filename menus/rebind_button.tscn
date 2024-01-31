@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://6lte8s1x1f0j"]
+
+[ext_resource type="Theme" uid="uid://qy8rymq7rudl" path="res://menus/level_select_button.tres" id="1_ln7sl"]
+[ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="2_8cnv6"]
+[ext_resource type="Script" path="res://menus/rebind_button.gd" id="2_ax0hq"]
+
+[node name="RebindButton" type="Button"]
+custom_minimum_size = Vector2(320, 0)
+offset_right = 64.0
+offset_bottom = 48.0
+theme = ExtResource("1_ln7sl")
+theme_override_fonts/font = ExtResource("2_8cnv6")
+toggle_mode = true
+icon_alignment = 2
+script = ExtResource("2_ax0hq")

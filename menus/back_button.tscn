@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ci17dt3c8qs6c"]
+
+[ext_resource type="Theme" uid="uid://qy8rymq7rudl" path="res://menus/level_select_button.tres" id="1_sccgc"]
+[ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="2_wlib7"]
+[ext_resource type="Script" path="res://menus/back_button.gd" id="3_fgrhl"]
+
+[node name="BackButton" type="Button"]
+offset_left = 80.0
+offset_top = 16.0
+offset_right = 208.0
+offset_bottom = 80.0
+theme = ExtResource("1_sccgc")
+theme_override_fonts/font = ExtResource("2_wlib7")
+theme_override_font_sizes/font_size = 36
+text = "Back"
+script = ExtResource("3_fgrhl")
