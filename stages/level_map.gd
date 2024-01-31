@@ -1,5 +1,7 @@
 extends Node
 
+var main_menu = "res://menus/title_screen_1.tscn"
+
 var levels = {
 	1: "res://stages/level_1.tscn",
 	2: "res://stages/level_2.tscn",

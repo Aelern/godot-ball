@@ -13,6 +13,8 @@ func _ready():
 	#Display best time for the level (Probably needs to be it's own child label)
 	if len(PlayerStats.level_times) >= level_number:
 		text = " " + str(level_number) + " \n(" + str(PlayerStats.level_times[level_number-1][1]) + ")"
+	else:
+		disabled = true
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
