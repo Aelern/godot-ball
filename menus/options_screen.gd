@@ -9,5 +9,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if get_viewport().gui_get_focus_owner() == null:
-		volume_bar.grab_focus()
+	pass
+	#if get_viewport().gui_get_focus_owner() == null:
+		#volume_bar.grab_focus()

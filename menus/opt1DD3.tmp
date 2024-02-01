@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://sjoxlsts15ye"]
+[gd_scene load_steps=9 format=3 uid="uid://sjoxlsts15ye"]
 
 [ext_resource type="Script" path="res://menus/options_screen.gd" id="1_bv6qf"]
 [ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="1_l1vfd"]
@@ -12,10 +12,6 @@ font = ExtResource("3_rblfx")
 font_size = 48
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_e1m1r"]
-default_font = ExtResource("3_rblfx")
-default_font_size = 36
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjdse"]
 bg_color = Color(0.223529, 0.223529, 0.223529, 1)
@@ -54,8 +50,6 @@ vertical_alignment = 1
 custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 size_flags_vertical = 1
-focus_mode = 2
-theme = SubResource("Theme_e1m1r")
 theme_override_fonts/font = ExtResource("3_rblfx")
 theme_override_font_sizes/font_size = 36
 theme_override_styles/fill = SubResource("StyleBoxFlat_yjdse")
