@@ -14,7 +14,10 @@ var levels = {
 	9: "res://stages/level_9.tscn",
 	10: "res://stages/level_10.tscn",
 	11: "res://stages/level_11.tscn",
-	12: "res://stages/level_12.tscn"
+	12: "res://stages/level_12.tscn",
+	13: "res://stages/level_13.tscn",
+	14: "res://stages/level_14.tscn"
+
 }
 
 var current_level = 0
