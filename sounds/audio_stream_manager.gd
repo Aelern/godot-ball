@@ -22,6 +22,7 @@ func _ready():
 	bgmPlayer = AudioStreamPlayer2D.new()
 	add_child(bgmPlayer)
 	bgmPlayer.stream = load("res://sounds/music.ogg")
+	bgmPlayer.finished.connect(play)
 
 func _on_stream_finished(stream):
 	available.append(stream)

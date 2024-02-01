@@ -10,7 +10,10 @@ func _ready():
 	LevelMap.timeUpdate.connect(updateTime)
 	updateTime(0.0)
 	PlayerStats.died.connect(updateDeaths)
-	updateDeaths(PlayerStats.death_count)
+	if PlayerStats.death_count != 0:
+		updateDeaths(PlayerStats.death_count)
+	else:
+		updateDeaths("0")
 
 
 func updateLevel():

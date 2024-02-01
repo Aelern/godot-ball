@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://m8v7bsnlixa2"
-path="res://.godot/imported/SuperMarioBros-ov7d.ttf-f7290ae340bb248190494710ace4b8c1.fontdata"
+uid="uid://cmy6ljy2cgrs2"
+path="res://.godot/imported/Grip-p7WZv.otf-196fa3befbc8971ea37a2be979f174f2.fontdata"
 
 [deps]
 
-source_file="res://assets/SuperMarioBros-ov7d.ttf"
-dest_files=["res://.godot/imported/SuperMarioBros-ov7d.ttf-f7290ae340bb248190494710ace4b8c1.fontdata"]
+source_file="res://assets/Grip-p7WZv.otf"
+dest_files=["res://.godot/imported/Grip-p7WZv.otf-196fa3befbc8971ea37a2be979f174f2.fontdata"]
 
 [params]
 
