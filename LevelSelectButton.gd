@@ -9,6 +9,7 @@ func _ready():
 	button_up.connect(func():
 		get_tree().call_deferred("change_scene_to_file", LevelMap.levels[level_number])
 		LevelMap.current_level = level_number
+		AudioStreamManager.bgmPlayer.play()
 		)
 	#Display best time for the level (Probably needs to be it's own child label)
 	if len(PlayerStats.level_times) >= level_number:

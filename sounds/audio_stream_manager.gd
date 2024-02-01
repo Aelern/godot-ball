@@ -6,6 +6,7 @@ var num_players = 4
 
 var available = []	#Available players
 var queue = []		#Queue of sounds to play
+var bgmPlayer
 
 var volume = 100
 
@@ -18,6 +19,9 @@ func _ready():
 		available.append(p)
 		p.finished.connect(_on_stream_finished.bind(p))
 		p.bus = "SFX"
+	bgmPlayer = AudioStreamPlayer2D.new()
+	add_child(bgmPlayer)
+	bgmPlayer.stream = load("res://sounds/music.ogg")
 
 func _on_stream_finished(stream):
 	available.append(stream)
