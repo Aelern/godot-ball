@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://sjoxlsts15ye"]
+[gd_scene load_steps=9 format=3 uid="uid://sjoxlsts15ye"]
 
 [ext_resource type="Script" path="res://menus/options_screen.gd" id="1_bv6qf"]
 [ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="1_l1vfd"]
@@ -6,19 +6,13 @@
 [ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="3_rblfx"]
 [ext_resource type="PackedScene" uid="uid://6lte8s1x1f0j" path="res://menus/rebind_button.tscn" id="4_4da3v"]
 [ext_resource type="PackedScene" uid="uid://ci17dt3c8qs6c" path="res://menus/back_button.tscn" id="4_ixs8j"]
+[ext_resource type="Theme" uid="uid://qy8rymq7rudl" path="res://menus/level_select_button.tres" id="5_v05rc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_d20eg"]
 font = ExtResource("3_rblfx")
 font_size = 48
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="Theme" id="Theme_e1m1r"]
-default_font = ExtResource("3_rblfx")
-default_font_size = 36
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yjdse"]
-bg_color = Color(0.223529, 0.223529, 0.223529, 1)
 
 [node name="OptionsScreen" type="Node2D"]
 script = ExtResource("1_bv6qf")
@@ -28,10 +22,10 @@ layer_0/tile_data = PackedInt32Array(0, 0, 0, 65536, 0, 0, 131072, 0, 0, 196608,
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 offset_left = 256.0
-offset_top = 64.0
+offset_top = 32.0
 offset_right = 768.0
-offset_bottom = 704.0
-theme_override_constants/separation = 32
+offset_bottom = 733.0
+theme_override_constants/separation = 24
 
 [node name="OptionsLabel" type="Label" parent="VBoxContainer"]
 layout_mode = 2
@@ -40,27 +34,41 @@ text = "Options"
 label_settings = ExtResource("2_51cs0")
 horizontal_alignment = 1
 
-[node name="VolumeHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="MusicHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
-[node name="VolumeLabel" type="Label" parent="VBoxContainer/VolumeHBoxContainer"]
+[node name="MusicLabel" type="Label" parent="VBoxContainer/MusicHBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Volume:"
+text = "Music:"
 label_settings = SubResource("LabelSettings_d20eg")
 vertical_alignment = 1
 
-[node name="VolumeBar" type="ProgressBar" parent="VBoxContainer/VolumeHBoxContainer"]
-custom_minimum_size = Vector2(320, 0)
+[node name="MusicBar" type="HSlider" parent="VBoxContainer/MusicHBoxContainer"]
+custom_minimum_size = Vector2(320, 32)
 layout_mode = 2
 size_flags_vertical = 1
-focus_mode = 2
-theme = SubResource("Theme_e1m1r")
-theme_override_fonts/font = ExtResource("3_rblfx")
-theme_override_font_sizes/font_size = 36
-theme_override_styles/fill = SubResource("StyleBoxFlat_yjdse")
+focus_neighbor_top = NodePath("../../BackButton")
+theme = ExtResource("5_v05rc")
 max_value = 10.0
-step = 1.0
+value = 10.0
+
+[node name="SFXHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="VBoxContainer/SFXHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX:"
+label_settings = SubResource("LabelSettings_d20eg")
+vertical_alignment = 1
+
+[node name="SFXBar" type="HSlider" parent="VBoxContainer/SFXHBoxContainer"]
+custom_minimum_size = Vector2(320, 32)
+layout_mode = 2
+size_flags_vertical = 1
+theme = ExtResource("5_v05rc")
+max_value = 10.0
 value = 10.0
 
 [node name="UpBindHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
@@ -131,6 +139,7 @@ vertical_alignment = 1
 
 [node name="BoostRebindButton" parent="VBoxContainer/BoostBindHBoxContainer" instance=ExtResource("4_4da3v")]
 layout_mode = 2
+focus_neighbor_bottom = NodePath("../../BackButton")
 action = "boost"
 
 [node name="BackButton" parent="VBoxContainer" instance=ExtResource("4_ixs8j")]

@@ -1,7 +1,8 @@
 extends Node
 
+#Adapted from https://kidscancode.org/godot_recipes/4.x/audio/audio_manager/index.html
+
 var num_players = 4
-var bus = "master"
 
 var available = []	#Available players
 var queue = []		#Queue of sounds to play
@@ -16,7 +17,7 @@ func _ready():
 		add_child(p)
 		available.append(p)
 		p.finished.connect(_on_stream_finished.bind(p))
-		p.bus = bus
+		p.bus = "SFX"
 
 func _on_stream_finished(stream):
 	available.append(stream)
