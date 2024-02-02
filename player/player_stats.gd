@@ -13,7 +13,7 @@ signal died(new_death_count)
 
 func _ready():
 	death_count = 0
-	#load_stats()
+	load_stats()
 	if level_times == []:
 		initialize_saved_values()
 		
@@ -32,6 +32,7 @@ func save_stats() -> void:
 
 func initialize_saved_values():
 	total_death_count = 0
-	for i in range(len(LevelMap.levels)):
+	for i in range(len(LevelMap.levels)-1):
 		level_times.append([0.0, 15.0])	#Sets default record time for every level to 15 seconds
+	level_times.append([0,0, 30.0])	#Last level gets a bigger base time
 
