@@ -20,7 +20,9 @@ var levels = {
 	12: "res://stages/level_12.tscn",
 	13: "res://stages/level_13.tscn",
 	14: "res://stages/level_14.tscn",
-	15: "res://stages/level_15.tscn"
+	15: "res://stages/level_15.tscn",
+	16: "res://stages/level_16.tscn",
+	17: "res://stages/level_17.tscn"
 
 }
 
