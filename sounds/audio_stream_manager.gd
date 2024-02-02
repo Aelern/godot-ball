@@ -21,8 +21,8 @@ func _ready():
 		p.bus = "SFX"
 	bgmPlayer = AudioStreamPlayer2D.new()
 	add_child(bgmPlayer)
+	bgmPlayer.bus = "Music"
 	bgmPlayer.stream = load("res://sounds/music.ogg")
-	bgmPlayer.finished.connect(play)
 
 func _on_stream_finished(stream):
 	available.append(stream)
