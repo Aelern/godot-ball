@@ -12,7 +12,7 @@
 
 [sub_resource type="Curve2D" id="Curve2D_32if2"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 192, 64, 0, 0, 0, 0, 128, 272, 0, 0, 0, 0, 192, 64)
+"points": PackedVector2Array(0, 0, 0, 0, 224, 80, 0, 0, 0, 0, 0, 224, 0, 0, 0, 0, 224, 80)
 }
 point_count = 3
 
@@ -71,10 +71,10 @@ position = Vector2(16, 128)
 position = Vector2(-16, 144)
 
 [node name="Spike14" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
-position = Vector2(-48, 144)
+position = Vector2(-48, 160)
 
 [node name="Spike15" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
-position = Vector2(-80, 144)
+position = Vector2(-80, 160)
 
 [node name="Spike16" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
 position = Vector2(-112, 144)
@@ -125,19 +125,19 @@ position = Vector2(-96, -176)
 position = Vector2(-64, -176)
 
 [node name="Spike32" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
-position = Vector2(-32, -176)
+position = Vector2(-32, -192)
 
 [node name="Spike33" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
-position = Vector2(0, -176)
+position = Vector2(0, -192)
 
 [node name="Spike34" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
-position = Vector2(32, -176)
+position = Vector2(32, -192)
 
 [node name="Spike35" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
 position = Vector2(64, -176)
 
 [node name="Spike36" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
-position = Vector2(96, -176)
+position = Vector2(96, -160)
 
 [node name="Spike37" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
 position = Vector2(128, -144)
@@ -178,28 +178,50 @@ position = Vector2(320, 208)
 [node name="Spike49" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
 position = Vector2(320, 240)
 
+[node name="Spike50" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
+position = Vector2(288, 272)
+
+[node name="Spike51" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
+position = Vector2(256, 272)
+
+[node name="Spike52" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
+position = Vector2(224, 272)
+
+[node name="Spike53" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
+position = Vector2(192, 272)
+
+[node name="Spike54" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
+position = Vector2(160, 272)
+
+[node name="Spike55" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
+position = Vector2(128, 272)
+
+[node name="Spike56" parent="Spikes/SpikeSpinner" instance=ExtResource("5_ss3hq")]
+position = Vector2(96, 272)
+
 [node name="Path2D" type="Path2D" parent="Spikes/SpikeSpinner"]
 curve = SubResource("Curve2D_32if2")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Spikes/SpikeSpinner/Path2D"]
-position = Vector2(192, 64)
-rotation = 1.8693
+position = Vector2(112, 152)
+rotation = 2.57026
+progress = 133.147
 
 [node name="TrackSpike" parent="Spikes/SpikeSpinner/Path2D/PathFollow2D" instance=ExtResource("6_l73ux")]
 speed = 1.0
 
 [node name="PathFollow2D2" type="PathFollow2D" parent="Spikes/SpikeSpinner/Path2D"]
-position = Vector2(182.595, 94.5653)
-rotation = 1.8693
-progress = 32.0
+position = Vector2(85.0737, 169.31)
+rotation = 2.57026
+progress = 165.155
 
 [node name="TrackSpike" parent="Spikes/SpikeSpinner/Path2D/PathFollow2D2" instance=ExtResource("6_l73ux")]
 speed = 1.0
 
 [node name="PathFollow2D3" type="PathFollow2D" parent="Spikes/SpikeSpinner/Path2D"]
-position = Vector2(173.179, 125.169)
-rotation = 1.8693
-progress = 64.0
+position = Vector2(58.1475, 186.619)
+rotation = 2.57026
+progress = 197.163
 
 [node name="TrackSpike" parent="Spikes/SpikeSpinner/Path2D/PathFollow2D3" instance=ExtResource("6_l73ux")]
 speed = 1.0
