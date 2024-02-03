@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://3s1o612bojl6"]
 
-[ext_resource type="Script" path="res://GameComplete.gd" id="1_kv1ux"]
+[ext_resource type="Script" path="res://menus/GameComplete.gd" id="1_kv1ux"]
 [ext_resource type="PackedScene" uid="uid://c7xkwietyob3k" path="res://objects/ground_tile_map.tscn" id="2_crk8s"]
 [ext_resource type="LabelSettings" uid="uid://bpqvf08y5foi0" path="res://menus/ScreenTitle.tres" id="3_lx7wp"]
 [ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="4_odggf"]

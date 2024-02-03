@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://d0tek1tplckhk"]
 
 [ext_resource type="FontFile" uid="uid://crv1fe8qwi4jv" path="res://assets/BRLNSR.TTF" id="1_e5d8q"]
-[ext_resource type="Script" path="res://LevelSelectButton.gd" id="1_gq7v0"]
+[ext_resource type="Script" path="res://menus/LevelSelectButton.gd" id="1_gq7v0"]
 [ext_resource type="Theme" uid="uid://qy8rymq7rudl" path="res://menus/level_select_button.tres" id="1_xjg72"]
 
 [node name="LevelSelectButton" type="Button"]

@@ -10,11 +10,13 @@ func _ready():
 	music_bar.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))) * 10
 	music_bar.value_changed.connect(func(value):
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Music"), linear_to_db(value / 10))
+		PlayerStats.musicVolume = value
 		)
 	sfx_bar.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))) * 10
 	sfx_bar.value_changed.connect(func(value):
 		AudioServer.set_bus_volume_db(AudioServer.get_bus_index("SFX"), linear_to_db(value / 10))
 		AudioStreamManager.play("res://sounds/dash.wav")
+		PlayerStats.sfxVolume = value
 		)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

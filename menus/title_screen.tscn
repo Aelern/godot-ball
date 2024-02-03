@@ -60,13 +60,13 @@ horizontal_alignment = 2
 layout_mode = 1
 anchors_preset = -1
 offset_left = 360.0
-offset_top = 464.0
+offset_top = 448.0
 offset_right = 656.0
 offset_bottom = 744.0
 
 [node name="StartButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_top = NodePath("../CreditsButton")
+focus_neighbor_top = NodePath("../ExitButton")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.658824, 0.894118, 0.988235, 1)
 theme_override_colors/font_focus_color = Color(0.411765, 0.411765, 0.411765, 1)
@@ -97,7 +97,6 @@ text = "Options"
 
 [node name="CreditsButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../StartButton")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.658824, 0.894118, 0.988235, 1)
 theme_override_colors/font_focus_color = Color(0.411765, 0.411765, 0.411765, 1)
@@ -105,6 +104,17 @@ theme_override_fonts/font = ExtResource("4_l6lja")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1erl6")
 text = "Credits"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_bottom = NodePath("../StartButton")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.658824, 0.894118, 0.988235, 1)
+theme_override_colors/font_focus_color = Color(0.411765, 0.411765, 0.411765, 1)
+theme_override_fonts/font = ExtResource("4_l6lja")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1erl6")
+text = "Exit Game"
 
 [node name="TitleLabel" type="Label" parent="."]
 layout_mode = 0
