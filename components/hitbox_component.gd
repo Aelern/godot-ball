@@ -1,6 +1,8 @@
 class_name HitboxComponent
 extends Area2D
 
+#Code adapted from a tutorial series by Heartbeast https://www.youtube.com/playlist?list=PL9FzW-m48fn09w6j8NowI_pSBVcsb3V78
+
 #Hitbox component does nothing without a child CollisionShape2D/CollisionPolygon2D
 #Hitbox collision property must be given the correct mask to function
 
