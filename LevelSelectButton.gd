@@ -7,6 +7,9 @@ extends Button
 func _ready():
 	#When clicked send you to the correct level
 	button_up.connect(func():
+		for i in level_number:
+			PlayerStats.level_times[i][0] = 999
+			PlayerStats.death_count = 0
 		get_tree().call_deferred("change_scene_to_file", LevelMap.levels[level_number])
 		LevelMap.current_level = level_number
 		AudioStreamManager.bgmPlayer.play()

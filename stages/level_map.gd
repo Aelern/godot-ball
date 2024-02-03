@@ -4,6 +4,7 @@ var main_menu = "res://menus/title_screen.tscn"
 var game_complete = "res://menus/game_complete.tscn"
 var level_select = "res://menus/level_select.tscn"
 var options = "res://menus/options_screen.tscn"
+var run_stats = "res://menus/run_stats.tscn"
 
 var levels = {
 	1: "res://stages/level_1.tscn",

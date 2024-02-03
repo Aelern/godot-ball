@@ -25,6 +25,6 @@ func change_level(hurtbox: HurtboxComponent):
 		LevelMap.current_level += 1
 	else:
 		AudioStreamManager.play(portal_audio)
-		get_tree().call_deferred("change_scene_to_file", LevelMap.game_complete)
+		get_tree().call_deferred("change_scene_to_file", LevelMap.run_stats)
 		LevelMap.current_level = 0
 		PlayerStats.save_stats()
