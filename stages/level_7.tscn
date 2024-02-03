@@ -58,103 +58,103 @@ position = Vector2(624, 368)
 speed = Vector2(0, -200)
 
 [node name="FragileSpike" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(160, 304)
+position = Vector2(176, 304)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike2" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(160, 336)
+position = Vector2(176, 336)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike3" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(160, 368)
+position = Vector2(176, 368)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike4" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(160, 400)
+position = Vector2(176, 400)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike5" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(160, 432)
+position = Vector2(176, 432)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike6" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(304, 304)
+position = Vector2(320, 304)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike7" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(304, 336)
+position = Vector2(320, 336)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike8" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(304, 368)
+position = Vector2(320, 368)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike9" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(304, 400)
+position = Vector2(320, 400)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike10" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(304, 432)
+position = Vector2(320, 432)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike11" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(448, 304)
+position = Vector2(464, 304)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike12" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(448, 336)
+position = Vector2(464, 336)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike13" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(448, 368)
+position = Vector2(464, 368)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike14" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(448, 400)
+position = Vector2(464, 400)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike15" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(448, 432)
+position = Vector2(464, 432)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike16" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(592, 304)
+position = Vector2(608, 304)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike17" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(592, 336)
+position = Vector2(608, 336)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike18" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(592, 368)
+position = Vector2(608, 368)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike19" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(592, 400)
+position = Vector2(608, 400)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike20" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(592, 432)
+position = Vector2(608, 432)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike21" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(736, 304)
+position = Vector2(752, 304)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike22" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(736, 336)
+position = Vector2(752, 336)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike23" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(736, 368)
+position = Vector2(752, 368)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike24" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(736, 400)
+position = Vector2(752, 400)
 speed = Vector2(150, 0)
 
 [node name="FragileSpike25" parent="Spikes" instance=ExtResource("6_vevok")]
-position = Vector2(736, 432)
+position = Vector2(752, 432)
 speed = Vector2(150, 0)
 
 [node name="Player" parent="." instance=ExtResource("4_b4id4")]
