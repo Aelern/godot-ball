@@ -16,12 +16,16 @@ var boostDir: Vector2		#The direction the boost will go in, the players current 
 
 func _ready():
 	hurtbox_component.hurt.connect(incrementDeathCounters)
+	LevelMap.levelUpdate.connect(safely_remove)
 
 func incrementDeathCounters(_area):
 	PlayerStats.death_count += 1
 	PlayerStats.total_death_count += 1
 	AudioStreamManager.play(death_audio)
-	
+
+func safely_remove():
+	hurtbox_component.disconnect("hurt", queue_free.unbind(1))
+	hurtbox_component.disconnect("hurt", incrementDeathCounters)
 
 #Finite State Machine handles movement for regular movement and the rocket boost
 func _physics_process(delta):

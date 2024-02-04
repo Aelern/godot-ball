@@ -37,3 +37,4 @@ var level_time = 0.0 :
 		timeUpdate.emit(level_time)
 
 signal timeUpdate(new_time)
+signal levelUpdate()

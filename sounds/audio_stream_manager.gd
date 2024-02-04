@@ -28,7 +28,7 @@ func _on_stream_finished(stream):
 	available.append(stream)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if not queue.is_empty() and not available.is_empty():
 		available[0].stream = load(queue.pop_front())
 		available[0].play()

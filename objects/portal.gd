@@ -12,13 +12,13 @@ func _process(delta):
 	LevelMap.level_time += delta
 
 #Run level completion effects then advance to the next level
-func change_level(hurtbox: HurtboxComponent):
+func change_level(_hurtbox: HurtboxComponent):
 
 	#Maybe move this to level_map.gd
 	PlayerStats.level_times[LevelMap.current_level-1][0] = snappedf(LevelMap.level_time, 0.01)
 	if LevelMap.level_time < PlayerStats.level_times[LevelMap.current_level-1][1]:
 		PlayerStats.level_times[LevelMap.current_level-1][1] = snappedf(LevelMap.level_time, 0.01)
-
+	LevelMap.levelUpdate.emit()
 	if(LevelMap.current_level < len(LevelMap.levels)):
 		AudioStreamManager.play(portal_audio)
 		get_tree().call_deferred("change_scene_to_file", LevelMap.levels[LevelMap.current_level + 1])
