@@ -7,6 +7,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	AudioStreamManager.bgmPlayer.stop()
 	for i in len(LevelMap.levels):
 		levels_label.text += str(i+1) + "\n"
 		if PlayerStats.level_times[i][0] < 999:
