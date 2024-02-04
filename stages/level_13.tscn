@@ -22,46 +22,57 @@ position = Vector2(929, 372)
 [node name="SpikeSpawner" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(688, 176)
 speed = Vector2(0, 200)
+rate = 0.85
 
 [node name="SpikeSpawner2" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(464, 240)
 speed = Vector2(0, 200)
+rate = 0.85
 
 [node name="SpikeSpawner3" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(272, 528)
 speed = Vector2(0, -200)
+rate = 0.85
 
 [node name="SpikeSpawner4" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(624, 240)
 speed = Vector2(0, 200)
+rate = 0.85
 
 [node name="SpikeSpawner5" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(881, 80)
 speed = Vector2(0, 200)
+rate = 0.85
 
 [node name="SpikeSpawner6" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(784, 144)
 speed = Vector2(0, 200)
+rate = 0.85
 
 [node name="SpikeSpawner7" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(208, 496)
 speed = Vector2(0, -200)
+rate = 0.85
 
 [node name="SpikeSpawner8" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(336, 560)
 speed = Vector2(0, -200)
+rate = 0.85
 
 [node name="SpikeSpawner9" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(400, 592)
 speed = Vector2(0, -200)
+rate = 0.85
 
 [node name="SpikeSpawner10" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(496, 656)
 speed = Vector2(0, -200)
+rate = 0.85
 
 [node name="SpikeSpawner11" parent="Spikes" instance=ExtResource("4_josmf")]
 position = Vector2(528, 208)
 speed = Vector2(0, 200)
+rate = 0.85
 
 [node name="Player" parent="." instance=ExtResource("5_baqlo")]
 position = Vector2(112, 366)
