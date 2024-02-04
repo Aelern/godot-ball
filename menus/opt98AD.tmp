@@ -34,25 +34,6 @@ text = "Options"
 label_settings = ExtResource("2_51cs0")
 horizontal_alignment = 1
 
-[node name="SFXHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
-layout_mode = 2
-
-[node name="SFXLabel" type="Label" parent="VBoxContainer/SFXHBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "SFX:"
-label_settings = SubResource("LabelSettings_d20eg")
-vertical_alignment = 1
-
-[node name="SFXBar" type="HSlider" parent="VBoxContainer/SFXHBoxContainer"]
-custom_minimum_size = Vector2(320, 32)
-layout_mode = 2
-size_flags_vertical = 1
-focus_neighbor_top = NodePath("../../BackButton")
-theme = ExtResource("5_v05rc")
-max_value = 10.0
-value = 10.0
-
 [node name="MusicHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 
@@ -64,6 +45,25 @@ label_settings = SubResource("LabelSettings_d20eg")
 vertical_alignment = 1
 
 [node name="MusicBar" type="HSlider" parent="VBoxContainer/MusicHBoxContainer"]
+custom_minimum_size = Vector2(320, 32)
+layout_mode = 2
+size_flags_vertical = 1
+focus_neighbor_top = NodePath("../../BackButton")
+theme = ExtResource("5_v05rc")
+max_value = 10.0
+value = 10.0
+
+[node name="SFXHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="SFXLabel" type="Label" parent="VBoxContainer/SFXHBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "SFX:"
+label_settings = SubResource("LabelSettings_d20eg")
+vertical_alignment = 1
+
+[node name="SFXBar" type="HSlider" parent="VBoxContainer/SFXHBoxContainer"]
 custom_minimum_size = Vector2(320, 32)
 layout_mode = 2
 size_flags_vertical = 1
@@ -144,4 +144,3 @@ action = "boost"
 
 [node name="BackButton" parent="VBoxContainer" instance=ExtResource("4_ixs8j")]
 layout_mode = 2
-focus_neighbor_bottom = NodePath("../SFXHBoxContainer/SFXBar")

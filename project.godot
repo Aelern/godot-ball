@@ -10,9 +10,12 @@ config_version=5
 
 [application]
 
-config/name="Ball"
+config/name="Into the Spikescape"
 run/main_scene="res://menus/title_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
+boot_splash/bg_color=Color(0.129558, 0.129558, 0.129558, 1)
+boot_splash/show_image=false
+boot_splash/image="res://assets/half_spike_logo (1).png"
 config/icon="res://assets/Spike.png"
 
 [autoload]
@@ -25,7 +28,8 @@ AudioStreamManager="*res://sounds/audio_stream_manager.gd"
 
 window/size/viewport_width=1024
 window/size/viewport_height=768
-window/stretch/mode="canvas_items"
+window/size/mode=2
+window/stretch/mode="viewport"
 
 [input]
 

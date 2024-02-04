@@ -1,6 +1,6 @@
 extends Node
 
-const SAVE_PATH = "res://save.cfg"	#"user://save.cfg"
+const SAVE_PATH = "user://save.cfg"
 
 var total_death_count: int	#Holds the total times the player has ever died
 var death_count: int :	#Holds the total times the player has died this play session

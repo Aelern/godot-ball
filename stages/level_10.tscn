@@ -36,7 +36,7 @@ position = Vector2(64, 0)
 position = Vector2(96, 0)
 
 [node name="SpikeSpinner2" parent="Spikes" instance=ExtResource("4_0pwad")]
-position = Vector2(528, 352)
+position = Vector2(528, 368)
 rotate_speed = 100.0
 
 [node name="Spike" parent="Spikes/SpikeSpinner2" instance=ExtResource("5_ebhvi")]
@@ -60,7 +60,7 @@ position = Vector2(0, 64)
 position = Vector2(0, 96)
 
 [node name="SpikeSpinner3" parent="Spikes" instance=ExtResource("4_0pwad")]
-position = Vector2(528, 544)
+position = Vector2(528, 560)
 rotate_speed = -75.0
 
 [node name="Spike" parent="Spikes/SpikeSpinner3" instance=ExtResource("5_ebhvi")]

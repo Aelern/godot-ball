@@ -5,7 +5,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	music_bar.grab_focus()
+	sfx_bar.grab_focus()
 	#Code adapted from https://www.gdquest.com/tutorial/godot/audio/volume-slider/
 	music_bar.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))) * 10
 	music_bar.value_changed.connect(func(value):
@@ -16,6 +16,12 @@ func _ready():
 		AudioStreamManager.bgmPlayer.play()
 		)
 	music_bar.focus_exited.connect(func():
+		AudioStreamManager.bgmPlayer.stop()
+		)
+	music_bar.drag_started.connect(func():
+		AudioStreamManager.bgmPlayer.play()
+		)
+	music_bar.drag_ended.connect(func(_value):
 		AudioStreamManager.bgmPlayer.stop()
 		)
 	sfx_bar.value = db_to_linear(AudioServer.get_bus_volume_db(AudioServer.get_bus_index("SFX"))) * 10
