@@ -26,4 +26,16 @@ func updateTime(new_time):
 	var minutes = int(int(new_time) / 60)
 	var seconds = int(new_time) - (60 * minutes)
 	var centiseconds = snappedf((new_time - (60 * minutes) - seconds), 0.01) * 100
-	timer_label.text = str(minutes) + ":" + str(seconds) + ":" + str(centiseconds)
+	if minutes < 10:
+		minutes = "0" + str(minutes)
+	else:
+		minutes = str(minutes)
+	if seconds < 10:
+		seconds = "0" + str(seconds)
+	else:
+		seconds = str(seconds)
+	if centiseconds < 10:
+		centiseconds = "0" + str(centiseconds)
+	else:
+		centiseconds = str(centiseconds)
+	timer_label.text = minutes + ":" + seconds + ":" + centiseconds
